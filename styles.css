@@ -1,0 +1,43 @@
+:root {
+    --DefaultTextSize: 10px;
+    --DefaultDivHeight: var(--DefaultTextSize) + 5px;
+    --DefaultHeaderFontSize: calc(var(--DefaultTextSize) * 2.25);
+    --DefaultHeaderSmallFont: calc(var(--DefaultTextSize) * 1.25);
+    --DefaultCardHeight: 50px;
+    --DefaultCardWidth: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header {
+    color: #0e0af8;
+    font-size: var(--DefaultHeaderFontSize);
+    font-weight: bold;
+    text-align: center;
+}
+div.StandaloneLink {
+    align-self: self-start;
+    align-content: start;
+    text-align: left;
+    text-indent: 5px;
+}
+div.StandaloneLink p {
+    height: var(--DefaultHeaderSmallFont);
+    font-size: var(--DefaultHeaderSmallFont);
+}
+div.StandaloneLink p a {
+    display: block;
+    height: var(--DefaultHeaderSmallFont);
+    font-size: var(--DefaultHeaderSmallFont);
+}
+div.CardContainer {
+    align-self: center;
+    border-radius: 10px;
+    background-color: rgba(165, 175, 184, 0.699);
+    margin: 5px 5px;
+    padding: 5px 10px;
+    height: var(--DefaultDivHeight);
+}
+div.card {
+    border-radius: 10px;
+    height: var(--DefaultCardHeight);
+    width: var(--DefaultCardWidth);
+}
