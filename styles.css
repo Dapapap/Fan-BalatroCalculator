@@ -3,12 +3,31 @@
     --DefaultDivHeight: var(--DefaultTextSize) + 5px;
     --DefaultHeaderFontSize: calc(var(--DefaultTextSize) * 2.25);
     --DefaultHeaderSmallFont: calc(var(--DefaultTextSize) * 1.25);
-    --DefaultCardHeight: 50px;
-    --DefaultCardWidth: 30px;
+    --DefaultCardHeight: 100px;
+    --DefaultCardWidth: 60px;
+
+    --DefaultColumnWidth: 50px;
+    
+    --ColorSpade: hsl(0, 0%, 11%);
+    --LightSpade: hsl(0, 0%, 50%);
+    --DarkSpade: hsl(0, 0%, 0%);
+
+    --ColorClub: hsl(216, 91%, 42%);
+    --LightClub: hsl(216, 91%, 50%);
+    --DarkClub: hsl(216, 91%, 25%);
+
+    --ColorHeart: hsl(350, 87%, 53%);
+    --LightHeart: hsl(350, 87%, 50%);
+    --DarkHeart: hsl(350, 87%, 25%);
+    
+    --ColorDiamond: hsl(54, 96%, 44%);
+    --LightDiamond: hsl(54, 96%, 50%);
+    --DarkDiamond: hsl(54, 96%, 25%);
+
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 header {
-    color: #0e0af8;
+    color: #14125a;
     font-size: var(--DefaultHeaderFontSize);
     font-weight: bold;
     text-align: center;
@@ -20,24 +39,133 @@ div.StandaloneLink {
     text-indent: 5px;
 }
 div.StandaloneLink p {
+    vertical-align: middle;
     height: var(--DefaultHeaderSmallFont);
-    font-size: var(--DefaultHeaderSmallFont);
+    font-size: var(--DefaultHeaderFontSize);
+    text-align: center;
 }
 div.StandaloneLink p a {
-    display: block;
+    float: left;
+    text-decoration: none;
+    vertical-align: middle;
     height: var(--DefaultHeaderSmallFont);
     font-size: var(--DefaultHeaderSmallFont);
 }
 div.CardContainer {
     align-self: center;
+    border: 2px;
+    border-style: solid;
+    border-collapse: separate;
     border-radius: 10px;
     background-color: rgba(165, 175, 184, 0.699);
     margin: 5px 5px;
     padding: 5px 10px;
     height: var(--DefaultDivHeight);
 }
-div.card {
-    border-radius: 10px;
+div.Card {
+    border-radius: 5px;
+    outline-style: solid;
+    outline-width: 2px;
     height: var(--DefaultCardHeight);
+    background-color: white;
     width: var(--DefaultCardWidth);
+    display: flex;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+}
+div.Card#Showcase{
+    margin: auto;
+}
+div#CardShowcase {
+    align-items: center;
+    align-content: center;
+    align-self: center;
+
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 25% auto;
+    gap: 5px;
+}
+.grid-container#menu {
+    display: grid;
+    grid-template-columns: minmax(30px, 1fr);
+    gap: 5px;
+    outline-style: none;
+    padding: 3px;
+    margin: auto;
+}
+.grid-container#menu div {
+    padding: 3px;
+    border: 2px;
+    border-radius: 10px;
+}
+.grid-container#menu div#ButtonContainer {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(20px, 1fr));
+}
+.grid-container#menu button {
+    width:initial;
+    
+}
+.grid-container div {
+    outline: 2px;
+    outline-style: groove;
+    outline-color: hsl(0, 0%, 50%);
+    border: 2px;
+
+}
+.grid-container div.menu {
+    grid-row: 1 / 4;
+    padding: 5px;
+    border-radius: 10px;
+}
+.grid-container div.PlayArea {
+    align-self: center;
+    align-items: center;
+    align-content: center;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;
+}
+div.PlayArea#mid {
+    height: calc(var(--DefaultCardHeight) * 3);
+}
+div.PlayArea#top, div.PlayArea#bot {
+    height: calc(var(--DefaultCardHeight) * 1.5);
+}
+div.Card#Spade {
+    color: var(--ColorSpade);
+}
+div.Card#Club {
+    color: var(--ColorClub);
+}
+div.Card#Heart {
+    color: var(--ColorHeart);
+}
+div.Card#Diamond {
+    color: var(--ColorDiamond);
+}
+
+button {
+    border-radius: 5px;
+    font-weight: 1000;
+}
+button#AddSpade {
+    background-color: var(--LightSpade);
+    color: var(--DarkSpade);
+    
+}
+button#AddClub {
+    background-color: var(--LightClub);
+    color: var(--DarkClub);
+}
+button#AddHeart {
+    background-color: var(--LightHeart);
+    color: var(--DarkHeart);
+}
+button#AddDiamond {
+    background-color: var(--LightDiamond);
+    color: var(--DarkDiamond);
 }
