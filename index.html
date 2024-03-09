@@ -7,7 +7,7 @@
         <script src="scripts.js"></script>
         <title>Balatro Calculator</title>
     </head>
-
+    
     
 
     <body>
@@ -29,13 +29,33 @@
                         <button type="button" id="AddClub">Club</button>
                         <button type="button" id="AddHeart">Heart</button>
                         <button type="button" id="AddDiamond">Diamond</button>
+                        <script>
+                            document.getElementById("AddSpade").addEventListener("click", function(){ SetCardSuit("Spade"); });
+                            document.getElementById("AddClub").addEventListener("click", function(){ SetCardSuit("Club"); });
+                            document.getElementById("AddHeart").addEventListener("click", function(){ SetCardSuit("Heart"); });
+                            document.getElementById("AddDiamond").addEventListener("click", function(){ SetCardSuit("Diamond"); });
+                        </script>
                     </div>
                     <div>
-                        
+                        <select class="RankSelect" name="Rank" title="Rank" contenteditable="true">
+                            <option value="A">Ace</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="J">Jack</option>
+                            <option value="Q">Queen</option>
+                            <option value="K">King</option>
+                        </select>
                     </div>
                     <div id="CardShowcase">
                         <div class="Card" id="Showcase">
-                            
+                            <p>0</p>
                         </div>
                     </div>
                 </div>

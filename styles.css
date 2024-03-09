@@ -73,9 +73,16 @@ div.Card {
     align-items: center;
     align-content: center;
     align-self: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 div.Card#Showcase{
     margin: auto;
+    text-align: center;
+    align-content: center;
+    vertical-align: middle;
+    font-weight: 1000;
+    font-size: calc(var(--DefaultTextSize) * 2.5);
 }
 div#CardShowcase {
     align-items: center;
@@ -128,24 +135,13 @@ div#CardShowcase {
     margin: 10px;
     padding: 5px;
     border-radius: 10px;
+    overflow: visible;
 }
 div.PlayArea#mid {
     height: calc(var(--DefaultCardHeight) * 3);
 }
 div.PlayArea#top, div.PlayArea#bot {
     height: calc(var(--DefaultCardHeight) * 1.5);
-}
-div.Card#Spade {
-    color: var(--ColorSpade);
-}
-div.Card#Club {
-    color: var(--ColorClub);
-}
-div.Card#Heart {
-    color: var(--ColorHeart);
-}
-div.Card#Diamond {
-    color: var(--ColorDiamond);
 }
 
 button {
@@ -168,4 +164,9 @@ button#AddHeart {
 button#AddDiamond {
     background-color: var(--LightDiamond);
     color: var(--DarkDiamond);
+}
+select.RankSelect {
+    font-size: var(--DefaultHeaderFontSize);
+    margin: auto;
+    visibility: visible;
 }
