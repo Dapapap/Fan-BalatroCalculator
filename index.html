@@ -25,19 +25,15 @@
             <div class="menu">
                 <div class="grid-container" id="menu">
                     <div id="ButtonContainer">
-                        <button type="button" id="AddSpade">Spade</button>
-                        <button type="button" id="AddClub">Club</button>
-                        <button type="button" id="AddHeart">Heart</button>
-                        <button type="button" id="AddDiamond">Diamond</button>
-                        <script>
-                            document.getElementById("AddSpade").addEventListener("click", function(){ SetCardSuit("Spade"); });
-                            document.getElementById("AddClub").addEventListener("click", function(){ SetCardSuit("Club"); });
-                            document.getElementById("AddHeart").addEventListener("click", function(){ SetCardSuit("Heart"); });
-                            document.getElementById("AddDiamond").addEventListener("click", function(){ SetCardSuit("Diamond"); });
-                        </script>
+                        <button type="button" id="AddSpade" onclick="SetCardSuit('Spade')">Spade</button>
+                        <button type="button" id="AddClub" onclick="SetCardSuit('Club')">Club</button>
+                        <button type="button" id="AddHeart" onclick="SetCardSuit('Heart')">Heart</button>
+                        <button type="button" id="AddDiamond" onclick="SetCardSuit('Diamond')">Diamond</button>
+                        
                     </div>
                     <div>
-                        <select class="RankSelect" name="Rank" title="Rank" contenteditable="true">
+                        <label for="Rank">Card Rank:</label>
+                        <select class="RankSelect" name="Rank" title="Rank" contenteditable="true" onchange="SetCardRank(this.value)">
                             <option value="A">Ace</option>
                             <option value="2">2</option>
                             <option value="3">3</option>

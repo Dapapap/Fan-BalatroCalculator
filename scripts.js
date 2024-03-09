@@ -7,3 +7,7 @@ SetCardSuit = function(Suit){
     return AttributeName
 
 }
+SetCardRank = function(Rank){
+    let currentCard = document.getElementById("Showcase");
+    currentCard.innerHTML = Rank;
+}

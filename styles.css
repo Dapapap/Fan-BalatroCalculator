@@ -165,7 +165,8 @@ button#AddDiamond {
     background-color: var(--LightDiamond);
     color: var(--DarkDiamond);
 }
-select.RankSelect {
+select.RankSelect, label {
+    padding: 5px;
     font-size: var(--DefaultHeaderFontSize);
     margin: auto;
     visibility: visible;
